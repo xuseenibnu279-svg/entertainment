@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,10 +44,12 @@
 <div class="video">
     <h2>Welcome!</h2>
     <p>Watch your favourite entertainment videos.</p>
-    <button><button onclick="document.querySelectorAll('.video')[1].scrollIntoView()">Watch Videos</button>Watch Videos</button>
+    <button onclick="document.getElementById('latest').scrollIntoView({behavior:'smooth'})">
+        Watch Videos
+    </button>
 </div>
 
-<div class="video">
+<div class="video" id="latest">
     <h2>Latest Videos</h2>
     <p>Discover new videos every day.</p>
 </div>
