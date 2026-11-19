@@ -1,58 +1,155 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Entertainment Videos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #101010;
-            color: white;
-        }
-        header {
-            background: #202020;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #00e676;
-        }
-        .video {
-            background: #222;
-            margin: 15px;
-            padding: 20px;
-            border-radius: 12px;
-        }
-        button {
-            background: #00e676;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MADADAALO</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: white;
+}
+
+header {
+  background: #181818;
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #00e676;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background: #181818;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #00e676;
+}
+
+.container {
+  padding: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.card {
+  background: #222;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.video-box {
+  background: #000;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00e676;
+  font-size: 20px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+button {
+  background: #00e676;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00c853;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #888;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Entertainment</h1>
-    <p>Welcome to our video platform</p>
+  <div class="logo">🟢 MADADAALO</div>
+  <p>Videos • Entertainment • Creativity</p>
 </header>
 
-<div class="video">
-    <h2>Welcome!</h2>
-    <p>Watch your favourite entertainment videos.</p>
-    <button onclick="document.getElementById('latest').scrollIntoView({behavior:'smooth'})">
+<nav>
+  <a href="#">🏠 Home</a>
+  <a href="#videos">🎬 Videos</a>
+  <a href="#upload">➕ Upload</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-content">
+      <h2>Welcome to MADADAALO 🌍</h2>
+      <p>Discover videos, entertainment and creativity from around the world!</p>
+      <button onclick="document.getElementById('videos').scrollIntoView()">
         Watch Videos
-    </button>
+      </button>
+    </div>
+  </div>
+
+  <h2 id="videos">🎬 Latest Videos</h2>
+
+  <div class="card">
+    <div class="video-box">
+      🎥 Videos coming soon!
+    </div>
+    <div class="card-content">
+      <h3>Welcome to MADADAALO</h3>
+      <p>Enjoy entertainment from around the world.</p>
+      ❤️ Like &nbsp; 💬 Comment
+    </div>
+  </div>
+
+  <div class="card" id="upload">
+    <div class="card-content">
+      <h2>📤 Upload Video</h2>
+      <p>Share your videos with the world!</p>
+      <input type="file" accept="video/*">
+      <br><br>
+      <button onclick="alert('Video upload system is coming soon!')">
+        Upload Video
+      </button>
+    </div>
+  </div>
+
 </div>
 
-<div class="video" id="latest">
-    <h2>Latest Videos</h2>
-    <p>Discover new videos every day.</p>
-</div>
+<footer>
+  © 2026 MADADAALO 🌍
+</footer>
 
 </body>
 </html>
